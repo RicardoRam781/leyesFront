@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-export default function LeyesTable({ data }) {
+export default function LeyesTable({ data }:any) {
 
     const navigate = useNavigate()
 
@@ -27,7 +27,7 @@ export default function LeyesTable({ data }) {
         </thead>
 
         <tbody className="divide-y divide-gray-200">
-          {data.map((item) => (
+          {data.map((item:any) => (
             <tr key={item.no} className="hover:bg-gray-50 transition" onClick={() => handleClick(item)}>
               <td className="px-6 py-4 text-sm text-gray-700">{item.no}</td>
 
@@ -42,7 +42,7 @@ export default function LeyesTable({ data }) {
 
               <td className="px-6 py-4">
                 <div className="flex gap-2">
-                  {item.archivos?.map((archivo, idx) => {
+                  {item.archivos?.map((archivo:any, idx:any) => {
                     const Icon = archivo.icon;
                     return (
                       <a
